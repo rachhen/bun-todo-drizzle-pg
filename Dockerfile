@@ -8,4 +8,4 @@ ADD bun.lockb bun.lockb
 RUN bun install
 COPY . .
 
-CMD ["bun", "run", "start"]
+ENTRYPOINT [ "./start.sh" ]
