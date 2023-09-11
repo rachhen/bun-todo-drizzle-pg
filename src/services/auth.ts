@@ -20,7 +20,7 @@ export async function signUp(input: SignUpInput) {
     password: input.password,
   });
 
-  const accessToken = await new jose.SignJWT({ id: users.id })
+  const accessToken = await new jose.SignJWT({ id: newUser.id })
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .sign(secret);
